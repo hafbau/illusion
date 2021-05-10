@@ -1,0 +1,91 @@
+@keyframes moveLinear {
+  0% {
+    offset-distance: 15%;
+  }
+
+  50% {
+    offset-distance: 85%;
+  }
+
+  100% {
+    offset-distance: 15%;
+  }
+}
+.small-ball {
+  height: 50px;
+  width: 50px;
+  background: green;
+  animation: moveLinear 8s linear infinite;
+  offset-path: path('M 0 250 L 500 250');
+}
+.big-ball {
+  background: darkred;
+  height: 500px;
+  width: 500px;
+  position: relative;
+}
+.line,
+.small-ball {
+  position: absolute;
+}
+.line {
+  border: 1px solid;
+  width: 100%;
+  top: 50%;
+  box-sizing: border-box;
+}
+
+.ball-1 {
+  offset-path: path('M 19 154 L 481 346');
+  animation-delay: 0.5s;
+}
+.ball-2 {
+  offset-path: path('M 73 73 L 427 427');
+  animation-delay: 1s;
+}
+.ball-3 {
+  offset-path: path('M 154 19 L 346 481');
+  animation-delay: 1.5s;
+}
+.ball-4 {
+  offset-path: path('M 250 0 L 250 500');
+  animation-delay: 2s;
+}
+.ball-5 {
+  offset-path: path('M 346 19 L 154 481');
+  animation-delay: 2.5s;
+}
+.ball-6 {
+  offset-path: path('M 427 73 L 73 427');
+  animation-delay: 3s;
+}
+.ball-7 {
+  offset-path: path('M 481 154 L 19 346');
+  animation-delay: 3.5s;
+}
+.line-1 {
+  transform: rotate(22.5deg)
+}
+.line-2 {
+  transform: rotate(45deg)
+}
+.line-3 {
+  transform: rotate(67.5deg)
+}
+.line-4 {
+  transform: rotate(90deg)
+}
+.line-5 {
+  transform: rotate(112.5deg)
+}
+.line-6 {
+  transform: rotate(135deg)
+}
+.line-7 {
+  transform: rotate(157.5deg)
+}
+
+.small-ball,
+.big-ball {
+  border-radius: 50%;
+}
